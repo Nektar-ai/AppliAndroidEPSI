@@ -88,7 +88,7 @@ public class CategoriesActivity extends AppCompatActivity {
                 }
             });
         }catch (JSONException e){
-            System.out.println("Oupsy "+e);
+            System.out.println("Oupsy " + e);
         }
     }
 }
