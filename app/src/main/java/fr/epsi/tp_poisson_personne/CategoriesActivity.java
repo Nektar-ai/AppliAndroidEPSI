@@ -21,6 +21,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -66,7 +67,13 @@ public class CategoriesActivity extends AppCompatActivity {
 
             for (int i=0;i<jArray.length();i++){
                 HashMap hMap = new HashMap<String, String>();
-                hMap.put("name", jArray.getJSONObject(i).getString("title"));
+                try {
+                    byte[] nameBytes = jArray.getJSONObject(i).getString("title").getBytes("ISO-8859-1");
+                    hMap.put("name",new String(nameBytes));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+
                 hMap.put("url", jArray.getJSONObject(i).getString("products_url"));
                 items.add(hMap);
             }

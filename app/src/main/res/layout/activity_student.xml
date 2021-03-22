@@ -15,15 +15,19 @@
     <TextView
         android:id="@+id/studentName"
         android:layout_width="match_parent"
-        android:layout_below="@+id/studentPicture"
         android:layout_height="200px"
+        android:layout_below="@+id/studentPicture"
         android:background="@color/purple_700"
-        android:orientation="horizontal" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/studentMail"
         android:layout_width="match_parent"
         android:layout_height="200px"
+        android:gravity="center"
         android:background="@color/purple_500"
         android:layout_below="@+id/studentName"/>
 
@@ -31,6 +35,7 @@
         android:id="@+id/studentGroup"
         android:layout_width="match_parent"
         android:layout_height="200px"
+        android:gravity="center"
         android:background="@color/purple_700"
         android:layout_below="@+id/studentMail"/>
 
