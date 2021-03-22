@@ -18,12 +18,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         z1 = findViewById(R.id.z1);
-        z1 = findViewById(R.id.z2);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
+        z2 = findViewById(R.id.z2);
 
         z1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +35,10 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }
