@@ -44,7 +44,7 @@ public class ProductsAdapter extends ArrayAdapter {
 
         productName.setText(hMap.get("name").toString());
         productDesc.setText(hMap.get("description").toString());
-        Picasso.get().load(hMap.get("picture").toString()).fit().centerCrop().into(picture);
+        Picasso.get().load(hMap.get("picture_url").toString()).fit().centerCrop().error(R.drawable.nologo).into(picture);
 
         return convertView;
     }

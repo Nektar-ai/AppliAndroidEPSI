@@ -88,7 +88,7 @@ public class CategoriesActivity extends AppCompatActivity {
                     String rayon = items.get(position).get("name");
                     Intent intent = new Intent(CategoriesActivity.this, ProductsActivity.class);
                     Bundle bundle = new Bundle();
-                    bundle.putString("rayon", rayon);
+                    bundle.putString("section", rayon);
                     bundle.putString("products_url", url);
                     intent.putExtras(bundle);
                     startActivity(intent);
