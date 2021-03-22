@@ -26,6 +26,6 @@ public class ProductActivity extends AppCompatActivity {
         description = findViewById(R.id.description);
         picture = findViewById(R.id.picture);
         description.setText(bundle.getString("description"));
-        Picasso.get().load(bundle.getString("picture")).fit().centerCrop().into(picture);
+        Picasso.get().load(bundle.getString("picture_url")).fit().centerCrop().error(R.drawable.nologo).into(picture);
     }
 }
