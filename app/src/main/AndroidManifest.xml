@@ -3,6 +3,7 @@
     package="fr.epsi.tp_poisson_personne">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
