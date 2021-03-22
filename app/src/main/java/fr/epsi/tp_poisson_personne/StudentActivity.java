@@ -20,6 +20,7 @@ public class StudentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
         setContentView(R.layout.activity_student);
+        getSupportActionBar().setTitle(bundle.getString("prenom")+" "+bundle.getString("nom"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         picture = findViewById(R.id.studentPicture);
@@ -31,7 +32,7 @@ public class StudentActivity extends AppCompatActivity {
             System.out.println("HHHHHHHHHHHHHH" + bundle.getString("photo"));
             name.setText(bundle.getString("prenom")+" "+bundle.getString("nom"));
             mail.setText(bundle.getString("email"));
-            group.setText(bundle.getString("groupe"));
+            group.setText("groupe : "+bundle.getString("groupe"));
             Picasso.get().load(bundle.getString("photo")).into(picture);
             //picture.setImageURI(Uri.parse(bundle.getString("photo")));
         }

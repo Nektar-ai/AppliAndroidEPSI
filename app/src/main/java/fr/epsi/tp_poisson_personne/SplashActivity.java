@@ -30,6 +30,8 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
+
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -47,7 +49,7 @@ public class SplashActivity extends AppCompatActivity {
         //Create or Open Database and check if user is connected
 
         SQLiteDatabase myDB = openOrCreateDatabase("db",MODE_NO_LOCALIZED_COLLATORS,null);
-        //myDB.execSQL("DROP TABLE students");
+        myDB.execSQL("DROP TABLE students");
         myDB.execSQL("CREATE TABLE IF NOT EXISTS " + FeedReaderContract.FeedEntry.TABLE_NAME + " (" +
                 FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
                 FeedReaderContract.FeedEntry.COLUMN_NAME_PHOTO + " TEXT," +

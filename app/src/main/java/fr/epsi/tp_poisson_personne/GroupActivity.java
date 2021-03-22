@@ -39,8 +39,6 @@ public class GroupActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(GroupActivity.this, StudentActivity.class);
 
-
-
                 Bundle bundle = new Bundle();
                 bundle.putString("nom", stuRes.getString(stuRes.getColumnIndex(FeedReaderContract.FeedEntry.COLUMN_NAME_NOM)));
                 bundle.putString("prenom", stuRes.getString(stuRes.getColumnIndex(FeedReaderContract.FeedEntry.COLUMN_NAME_PRENOM)));
