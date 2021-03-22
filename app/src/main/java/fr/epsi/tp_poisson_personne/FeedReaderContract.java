@@ -12,5 +12,6 @@ public class FeedReaderContract {
         public static final String COLUMN_NAME_PRENOM = "prenom";
         public static final String COLUMN_NAME_EMAIL = "email";
         public static final String COLUMN_NAME_GROUPE = "groupe";
+        public static final String COLUMN_NAME_PHOTO = "photo";
     }
 }
