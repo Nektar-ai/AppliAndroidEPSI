@@ -14,5 +14,4 @@ public class CategoriesActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         System.out.println("YO");
     }
-
 }
