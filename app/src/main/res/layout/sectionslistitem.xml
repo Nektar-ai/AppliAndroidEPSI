@@ -2,10 +2,22 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/sectionName"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:strokeWidth="1dp"
+        app:cardCornerRadius="8dp"
+        app:strokeColor="@color/purple_700"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/sectionName"
+            android:layout_width="100dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.card.MaterialCardView>
+
 
 </RelativeLayout>
