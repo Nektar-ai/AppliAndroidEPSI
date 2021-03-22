@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,18 +23,16 @@ public class SplashActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_splash);
+        try {
+            verifyDB();
+        }catch (Exception e){
+            Toast.makeText(this,"Erreur chargement BDD", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        new Handler().postDelayed(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        startHome();
-                    }
-                },2000);
     }
 
     private void startHome(){
