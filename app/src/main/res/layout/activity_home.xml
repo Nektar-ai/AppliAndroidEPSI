@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="250dp"
         android:layout_centerInParent="true"
-        android:text="Zone1">
+        android:text="Students">
     </Button>
 
     <Button
@@ -24,7 +24,7 @@
         android:layout_below="@+id/z1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Zone2">
+        android:text="Grocery">
     </Button>
 
 </RelativeLayout>
