@@ -41,12 +41,16 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void verifyDB() throws JSONException {
+
+
+
         //Create or Open Database and check if user is connected
 
         SQLiteDatabase myDB = openOrCreateDatabase("db",MODE_NO_LOCALIZED_COLLATORS,null);
-
+        //myDB.execSQL("DROP TABLE students");
         myDB.execSQL("CREATE TABLE IF NOT EXISTS " + FeedReaderContract.FeedEntry.TABLE_NAME + " (" +
                 FeedReaderContract.FeedEntry._ID + " INTEGER PRIMARY KEY," +
+                FeedReaderContract.FeedEntry.COLUMN_NAME_PHOTO + " TEXT," +
                 FeedReaderContract.FeedEntry.COLUMN_NAME_EMAIL + " TEXT," +
                 FeedReaderContract.FeedEntry.COLUMN_NAME_GROUPE + " TEXT," +
                 FeedReaderContract.FeedEntry.COLUMN_NAME_NOM + " TEXT," +
@@ -62,18 +66,21 @@ public class SplashActivity extends AppCompatActivity {
             student1.put(FeedReaderContract.FeedEntry.COLUMN_NAME_PRENOM, "Laurent");
             student1.put(FeedReaderContract.FeedEntry.COLUMN_NAME_EMAIL, "laurent.varden@epsi.fr");
             student1.put(FeedReaderContract.FeedEntry.COLUMN_NAME_GROUPE, "1");
+            student1.put(FeedReaderContract.FeedEntry.COLUMN_NAME_PHOTO, "https://cdn.discordapp.com/attachments/803550098738118679/822138623344377946/laurent.jpg");
 
             ContentValues student2 = new ContentValues();
             student2.put(FeedReaderContract.FeedEntry.COLUMN_NAME_NOM, "ROPGOP");
             student2.put(FeedReaderContract.FeedEntry.COLUMN_NAME_PRENOM, "Léon");
             student2.put(FeedReaderContract.FeedEntry.COLUMN_NAME_EMAIL, "leon.ropgop@epsi.fr");
             student2.put(FeedReaderContract.FeedEntry.COLUMN_NAME_GROUPE, "1");
+            student2.put(FeedReaderContract.FeedEntry.COLUMN_NAME_PHOTO, "https://cdn.discordapp.com/attachments/803550098738118679/822138625167851520/leon.jpg");
 
             ContentValues student3 = new ContentValues();
             student3.put(FeedReaderContract.FeedEntry.COLUMN_NAME_NOM, "DAMHEC");
             student3.put(FeedReaderContract.FeedEntry.COLUMN_NAME_PRENOM, "Donovan");
             student3.put(FeedReaderContract.FeedEntry.COLUMN_NAME_EMAIL, "donovan.damhec@epsi.fr");
             student3.put(FeedReaderContract.FeedEntry.COLUMN_NAME_GROUPE, "1");
+            student3.put(FeedReaderContract.FeedEntry.COLUMN_NAME_PHOTO, "https://cdn.discordapp.com/attachments/803550098738118679/822138619023065108/donovan.jpg");
 
             myDB.insert("students", null, student1);
             myDB.insert("students", null, student2);
