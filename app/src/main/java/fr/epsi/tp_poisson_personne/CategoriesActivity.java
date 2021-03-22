@@ -12,5 +12,7 @@ public class CategoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categories);
         getSupportActionBar().setTitle("Sections");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        System.out.println("YO");
     }
+
 }
