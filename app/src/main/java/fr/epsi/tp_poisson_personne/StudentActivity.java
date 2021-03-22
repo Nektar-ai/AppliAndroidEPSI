@@ -29,7 +29,6 @@ public class StudentActivity extends AppCompatActivity {
         group = findViewById(R.id.studentGroup);
 
         if (bundle != null) {
-            System.out.println("HHHHHHHHHHHHHH" + bundle.getString("photo"));
             name.setText(bundle.getString("prenom")+" "+bundle.getString("nom"));
             mail.setText(bundle.getString("email"));
             group.setText("groupe : "+bundle.getString("groupe"));
